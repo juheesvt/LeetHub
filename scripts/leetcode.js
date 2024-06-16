@@ -342,7 +342,7 @@ function findCode(
                 slicedText.indexOf("'") + 1,
                 slicedText.lastIndexOf("'"),
               );
-              msg = `Time: ${resultRuntime}, Memory: ${resultMemory} - LeetHub`;
+              msg = `Level: ${difficulty}, Title: ${directory.split("-").slice(1).join(" ")}, Time: ${resultRuntime}, Memory: ${resultMemory} - LeetHub`;
             }
 
             if (code != null) {
@@ -508,7 +508,7 @@ function parseStats() {
   const spacePercentile = probStats[3].textContent;
 
   // Format commit message
-  return `Time: ${time} (${timePercentile}), Space: ${space} (${spacePercentile}) - LeetHub`;
+  return `Level: ${difficulty}, Title: ${directory.split("-").slice(1).join(" ")}, Time: ${time} (${timePercentile}), Space: ${space} (${spacePercentile}) - LeetHub`;
 }
 
 document.addEventListener('click', (event) => {
